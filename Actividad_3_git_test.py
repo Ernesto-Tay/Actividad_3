@@ -12,14 +12,27 @@ while key:
         beam = True
         while beam:
             print("\n\n-------------Menu--------------\n1. Calcular temperatura\n2. Calcular el área de un triángulo\n3. Salir")
-            ops_man = input("Opción: ")
+            while True:
+                try:
+                    ops_man = input("Opción: ")
+                    break
+                except:
+                    print("\nIngrese solamente números enteros")
+
             match ops_man:
                 case "1":
-                    temp_ops = int(input("\n"+"-"*5+"Conversor de temperaturas"+"-"*5+"\n1. Celsius a Farenheit\n2. Farenheit a Celsius\nOpción a elegir:"))
+                    print("\n" + "-" * 5 + "Conversor de temperaturas" + "-" * 5 + "\n1. Celsius a Farenheit\n2. Farenheit a Celsius")
+                    while True:
+                        try:
+                            temp_ops = int(input("Elija una opción:"))
+                            break
+                        except:
+                            print("\nPor favor ingrese un número entero")
+
                     if temp_ops == 1:
                         while True:
                             try:
-                                c_temp = int(input("Ingrese la temperatura en Celsius: "))
+                                c_temp = float(input("Ingrese la temperatura en Celsius: "))
                                 break
                             except:
                                 print("Valor inválido. Ingresar solo números\n")
@@ -29,7 +42,7 @@ while key:
                     elif temp_ops == 2:
                         while True:
                             try:
-                                f_temp = int(input("Ingrese la temperatura en Farenheit: "))
+                                f_temp = float(input("Ingrese la temperatura en Farenheit: "))
                                 break
                             except:
                                 print("Valor inválido, ingresar solo números\n")
@@ -39,8 +52,8 @@ while key:
                 case "2":
                     while True:
                         try:
-                            b = int(input("Ingrese el ancho de la base del triángulo (en cm): "))
-                            h = int(input("Ingrese la altura del triángulo (en cm: "))
+                            b = float(input("Ingrese el ancho de la base del triángulo (en cm): "))
+                            h = float(input("Ingrese la altura del triángulo (en cm: "))
 
                         except:
                             print("Valor inválido, ingresar solo números")
@@ -51,6 +64,9 @@ while key:
                     print("\nSaliendo del sistema")
                     use = True
                     beam = False
+
+                case _:
+                    print("Opción no disponible.")
     else:
         print("\nUsuario no reconocido.")
         if counter < 4:
