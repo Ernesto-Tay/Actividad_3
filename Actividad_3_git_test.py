@@ -1,6 +1,6 @@
 key = True
 counter = 0
-use = False
+use = True
 while key:
     if use:
         key = False
@@ -21,7 +21,12 @@ while key:
                 case "3":
                     use = True
                     beam = False
-    elif counter == 4:
+    else:
+        print("\nUsuario no reconocido.")
+        if counter < 4:
+            print("Vuelva a intentarlo.")
+
+    if counter == 4:
         print("\n\nAcceso rechazado, vuelva más tarde")
         key = False
 print("Gracias por usar el programa.")
