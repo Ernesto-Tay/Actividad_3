@@ -12,7 +12,13 @@ while key:
         beam = True
         while beam:
             print("\n\n-------------Menu--------------\n1. Calcular temperatura\n2. Calcular el área de un triángulo\n3. Salir")
-            ops_man = input("Opción: ")
+            while True:
+                try:
+                    ops_man = input("Opción: ")
+                    break
+                except:
+                    print("\nIngrese solamente números enteros")
+
             match ops_man:
                 case "1":
                     print("\n" + "-" * 5 + "Conversor de temperaturas" + "-" * 5 + "\n1. Celsius a Farenheit\n2. Farenheit a Celsius")
