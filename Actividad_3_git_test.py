@@ -36,10 +36,19 @@ while key:
                         c_end_temp = (f_temp - 32)/1.8
                         print(f"La temperatura en Celsius es de {c_end_temp}°\n")
 
-
                 case "2":
-                    pass
+                    while True:
+                        try:
+                            b = int(input("Ingrese el ancho de la base del triángulo (en cm): "))
+                            h = int(input("Ingrese la altura del triángulo (en cm: "))
+
+                        except:
+                            print("Valor inválido, ingresar solo números")
+                        area = (b*h)
+                        print(f"El área del triángulo es de {area} cm^2")
+
                 case "3":
+                    print("\nSaliendo del sistema")
                     use = True
                     beam = False
     else:
