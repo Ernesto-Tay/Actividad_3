@@ -1,6 +1,6 @@
 key = True
 counter = 0
-use = True
+use = False
 while key:
     if use:
         key = False
