@@ -54,6 +54,7 @@ while key:
                         try:
                             b = float(input("Ingrese el ancho de la base del triángulo (en cm): "))
                             h = float(input("Ingrese la altura del triángulo (en cm: "))
+                            break
 
                         except:
                             print("Valor inválido, ingresar solo números")
